@@ -32,7 +32,9 @@ Our model achieves an F1 score of 76% on the annotated dataset.
 Using a human-labeled dataset from Jurgens et al. (2018) as training data, which includes nearly 2,000 sentences annotated for one of the six citation functions, we implemented a BERT-based classification model, specifically leveraging SciBERT as the pre-trained model. Our model achieved an F1 score of 76% on the annotated dataset. We then applied this trained model to classify sentences mentioning AlphaFold according to their citation function. Given our research focus on how the focal paper employs AlphaFold, we concentrated on the 'Uses,' 'Comparison or Contrast,' and 'Background' functions, merging the remaining categories into 'Other.'
 
 ### Results
+
 Figure1:Share of all Articles Citing the Top Three Papers (green line) and Mentioning AlphaFold in the Title or Abstract (blue line)
 ![](./fig2.png)
+
 Figure1 illustrates the proportion of articles citing the top three foundational references (blue line) and those explicitly mentioning AlphaFold (including its variations) in the title or abstract. These two measurements correspond to common approaches used to identify publications on the topic. Notably, no papers in our dataset cited the foundational AlphaFold article (Jumper et al., 2021) before its publication in 2021.
 
