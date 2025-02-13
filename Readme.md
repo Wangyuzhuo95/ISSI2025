@@ -3,6 +3,17 @@ by Haochuan Cui1, Yuzhuo Wang2 and Kai Li3
 
 ## Methods:
 
+### 0.Identifying the mention words in the full text 
+
+cryo-electron microscopy [cryo-em, cryoem, cryo em, cryo-electron microscopy, cryoelectron microscopy, cryo electron microscopy, cryoelectronmicroscopy, cryo-electron-microscopy, cryo-electronmicroscopy]
+
+green fluorescent protein [ gfp, green fluorescent protein, green-fluorescent protein, green-fluorescent-protein, greenfluorescent protein, polymerase chain reaction]
+
+polymerase chain reaction [pcr, polymerase chain reaction, polymerase-chain-reaction, polymerase-chain reaction, polymerase chain-reaction, polymerase chainreaction, polymerase-chainreaction, polymerasechain reaction]
+
+AlphaFold [ alphafold, alphafold2, alphafold1, alpha fold, alpha fold2, alphafold2.2, alphafold2.0, alphafold2.1, alphafold2.3, alphafold22] 
+
+
 ### 1.Identifying the type of sections in the full text
 We analyzed the paper section title where AlphaFold is located as one signal of how AlphaFold is used in scientific research. Existing studies have shown that section titles provide sufficient information for identifying the functional structure for sections (Ma et al., 2022). Therefore, we used a rule-based approach to process section titles and identify their categories. 
 
@@ -30,6 +41,8 @@ We initially collected 56,650 sentences mentioningAlphaFold from the PMC Open Ac
 Our model achieves an F1 score of 76% on the annotated dataset.
 
 Using a human-labeled dataset from Jurgens et al. (2018) as training data, which includes nearly 2,000 sentences annotated for one of the six citation functions, we implemented a BERT-based classification model, specifically leveraging SciBERT as the pre-trained model. Our model achieved an F1 score of 76% on the annotated dataset. We then applied this trained model to classify sentences mentioning AlphaFold according to their citation function. Given our research focus on how the focal paper employs AlphaFold, we concentrated on the 'Uses,' 'Comparison or Contrast,' and 'Background' functions, merging the remaining categories into 'Other.'
+
+
 
 ### Results
 
